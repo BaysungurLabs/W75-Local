@@ -1,0 +1,7 @@
+# W75 Local derleme betigi (.NET Framework 4.0 csc)
+Set-Location $PSScriptRoot
+$csc = Join-Path $env:WINDIR "Microsoft.NET\Framework64\v4.0.30319\csc.exe"
+if (-not (Test-Path $csc)) { throw "csc.exe bulunamadi: $csc" }
+& $csc /nologo /codepage:65001 /target:winexe /win32icon:ikon\w75.ico /optimize+ /out:W75Local.exe /r:System.Windows.Forms.dll /r:System.Drawing.dll /r:System.Web.Extensions.dll /r:System.IO.Compression.dll /r:System.IO.Compression.FileSystem.dll /resource:layout-w75.json,layout.json /resource:actions.json,actions.json /resource:etiketler.json,etiketler.json /resource:yon-etiketleri.json,yon-etiketleri.json /resource:mod-secenekleri.json,mod-secenekleri.json /resource:ikon\w75.ico,w75.ico AssemblyInfo.cs Program.cs Hid.cs Protocol.cs Model.cs DeviceProfiles.cs AppIcon.cs Theme.cs WindowTheme.cs ThemedMessageBox.cs DarkNumeric.cs GenelAyarlar.cs MainFormPolling.cs WriteVerifier.cs KeyboardPanel.cs SocdStore.cs SocdTab.cs TriggerVerify.cs ValorantPreset.cs OnerilenAyarlar.cs DigerTab.cs DarkTabControl.cs MainFormKeyboards.cs MainFormWindow.cs SocdCard.cs MainFormBundle.cs FlatCombo.cs KeyLabels.cs MainFormLabels.cs MainFormLiveLight.cs MainFormProfileActivate.cs MainFormDirection.cs MainFormRestore.cs MainFormModeOptions.cs ModeOptions.cs DirPicker.cs NumSlider.cs TravelGraph.cs MainForm.cs
+if ($LASTEXITCODE -ne 0) { throw "Derleme basarisiz (csc exit $LASTEXITCODE)." }
+Write-Host "W75Local.exe olusturuldu."

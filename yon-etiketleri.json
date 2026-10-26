@@ -1,0 +1,18 @@
+{
+  "aciklama": "Işık yönü değerlerinin anlamı: 'ok' (kartta ve önizlemede simge), 'metin' (ipucu ve önizleme açıklaması), 'kisa' (az kartlı modlarda kart başlığı), 'akis' (önizleme çizimi: 'duz' = her tuşta aynı ok, 'disa' = ortadan iki yana dışa oklar, 'ice' = köşelerden ortaya içe oklar, 'donus' = saat yönü, 'donus-ters' = saat yönünün tersi). Hangi modda hangi değerlerin gösterildiği mod-secenekleri.json içindedir. Yön eşleşmesi, yön kullanan beş modun hepsinde kullanıcı tarafından gerçek klavyede DOĞRULANDI: Dalga (0-5; tam renk açık, hız 0, parlaklık 5; 4 eleme yoluyla), Aurora (dışa = 4, içe = 5), Çizgilenme (← = 1, → = 0), Hıza Duyarlı (↑ = 2, ↓ = 3) ve Radar (↻ saat yönü = 0, ↺ saat yönünün tersi = 1; ilk varsayımın tersi çıktı). 'varsayilan' bölümü Dalga/Aurora/Çizgilenme/Hıza Duyarlı için geçerlidir; 'modlar' bölümü bir modda anlam farklıysa o modun değerlerini taşır (şu an yalnızca Radar). Tek yerden düzeltmek için: değeri bu dosyada değiştirin, derleyin.",
+  "dogrulananModlar": [ 2, 4, 7, 12, 15 ],
+  "varsayilan": {
+    "0": { "ok": "→", "metin": "Soldan sağa", "kisa": "Soldan sağa", "akis": "duz" },
+    "1": { "ok": "←", "metin": "Sağdan sola", "kisa": "Sağdan sola", "akis": "duz" },
+    "2": { "ok": "↑", "metin": "Aşağıdan yukarıya", "kisa": "Aşağıdan yukarı", "akis": "duz" },
+    "3": { "ok": "↓", "metin": "Yukarıdan aşağıya", "kisa": "Yukarıdan aşağı", "akis": "duz" },
+    "4": { "ok": "← →", "metin": "Ortadan iki yana, dışa doğru", "kisa": "Ortadan dışa", "akis": "disa" },
+    "5": { "ok": "→ ←", "metin": "Köşelerden ortaya, içe doğru", "kisa": "Köşeden içe", "akis": "ice" }
+  },
+  "modlar": {
+    "4": {
+      "0": { "ok": "↻", "metin": "Saat yönü", "kisa": "Saat yönü", "akis": "donus" },
+      "1": { "ok": "↺", "metin": "Saat yönünün tersi", "kisa": "Saat yönü tersi", "akis": "donus-ters" }
+    }
+  }
+}

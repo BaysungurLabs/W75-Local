@@ -1,0 +1,20 @@
+{
+  "aciklama": "Işık modu başına gösterilecek seçenekler (kullanıcının verdiği tablo). Alanlar: parlaklik, hiz, tamRenk, onRenk, arkaRenk (true = kontrol görünür) ve yonler (o modda gösterilen yön değerleri, kart sırasıyla; boş = yön kontrolü yok). Yön değerlerinin ne anlama geldiği (ok, açıklama, önizleme akışı) yon-etiketleri.json içindedir; moda özel anlam orada 'modlar' bölümüne yazılır. Yön değerleri, yön kullanan beş modun (Dalga, Radar, Aurora, Hıza Duyarlı, Çizgilenme) hepsinde gerçek klavyede (W75 V2, firmware V3.22.07) doğrulandı. Radar kartları ↺ (değer 1) sonra ↻ (değer 0) sırasındadır. Tabloda olmayan (bilinmeyen) bir mod kimliği için tüm kontroller ve 0-5 yönleri gösterilir. Gizlenen kontrolün değeri profilde korunur, yazma paketi değişmez. Mod adları programdaki kimliklerle eşleşir: 0 Statik, 1 Nefes (Breath), 2 Dalga (Wave), 3 Neon, 4 Radar, 6 Reaktif (Reactive), 7 Aurora, 8 Reaktif Dalgalanma (Ripple), 9 Pırıltı (Twinkle), 10 Özel (Custom), 11 Çapraz (Cross), 12 Hıza Duyarlı (Speed Respond), 14 Oto Dalgalanma (Auto Ripple), 15 Çizgilenme (Striation), 16 Havai Fişekler (Fireworks).",
+  "modlar": {
+    "0":  { "ad": "Statik",              "parlaklik": true, "hiz": false, "tamRenk": false, "onRenk": true, "arkaRenk": false, "yonler": [] },
+    "1":  { "ad": "Nefes",               "parlaklik": true, "hiz": true,  "tamRenk": true,  "onRenk": true, "arkaRenk": true,  "yonler": [] },
+    "2":  { "ad": "Dalga",               "parlaklik": true, "hiz": true,  "tamRenk": true,  "onRenk": true, "arkaRenk": true,  "yonler": [0, 1, 2, 3, 4, 5] },
+    "3":  { "ad": "Neon",                "parlaklik": true, "hiz": true,  "tamRenk": true,  "onRenk": true, "arkaRenk": true,  "yonler": [] },
+    "4":  { "ad": "Radar",               "parlaklik": true, "hiz": true,  "tamRenk": true,  "onRenk": true, "arkaRenk": true,  "yonler": [1, 0] },
+    "6":  { "ad": "Reaktif",             "parlaklik": true, "hiz": true,  "tamRenk": true,  "onRenk": true, "arkaRenk": true,  "yonler": [] },
+    "7":  { "ad": "Aurora",              "parlaklik": true, "hiz": true,  "tamRenk": true,  "onRenk": true, "arkaRenk": true,  "yonler": [4, 5] },
+    "8":  { "ad": "Reaktif Dalgalanma",  "parlaklik": true, "hiz": true,  "tamRenk": true,  "onRenk": true, "arkaRenk": true,  "yonler": [] },
+    "9":  { "ad": "Pırıltı",             "parlaklik": true, "hiz": true,  "tamRenk": true,  "onRenk": true, "arkaRenk": true,  "yonler": [] },
+    "10": { "ad": "Özel",                "parlaklik": true, "hiz": false, "tamRenk": false, "onRenk": true, "arkaRenk": false, "yonler": [] },
+    "11": { "ad": "Çapraz",              "parlaklik": true, "hiz": true,  "tamRenk": true,  "onRenk": true, "arkaRenk": true,  "yonler": [] },
+    "12": { "ad": "Hıza Duyarlı",        "parlaklik": true, "hiz": false, "tamRenk": true,  "onRenk": true, "arkaRenk": true,  "yonler": [2, 3] },
+    "14": { "ad": "Oto Dalgalanma",      "parlaklik": true, "hiz": true,  "tamRenk": true,  "onRenk": true, "arkaRenk": true,  "yonler": [] },
+    "15": { "ad": "Çizgilenme",          "parlaklik": true, "hiz": true,  "tamRenk": true,  "onRenk": true, "arkaRenk": true,  "yonler": [1, 0] },
+    "16": { "ad": "Havai Fişekler",      "parlaklik": true, "hiz": true,  "tamRenk": true,  "onRenk": true, "arkaRenk": true,  "yonler": [] }
+  }
+}
