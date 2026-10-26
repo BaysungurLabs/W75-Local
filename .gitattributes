@@ -1,0 +1,12 @@
+# Satır sonları: metin dosyaları depoda LF, derle.ps1 gibi Windows betikleri CRLF
+* text=auto
+*.cs text eol=crlf
+*.ps1 text eol=crlf
+*.md text eol=lf
+*.json text eol=lf
+
+# İkili dosyalar
+*.png binary
+*.ico binary
+*.exe binary
+*.zip binary
