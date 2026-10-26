@@ -1,0 +1,24 @@
+# Kullanıcı verisi (normalde %APPDATA%\W75Ayarlayici altındadır; kopyası çıkarsa depoya girmesin)
+profiles.json
+profiles.json.bozuk-*
+profiles.json.oncesi-*
+genel.json
+socd.json
+diger.json
+pencere.json
+yazim-durumu.json
+*.yeni
+backups/
+
+# Derleme çıktıları (exe ve zip depoya girmez; Releases sayfasından dağıtılır)
+*.exe
+*.zip
+*.dll
+obj/
+w75-crash.log
+
+# Yedekler ve geçici dosyalar
+backup/
+*.bak
+*.tmp
+Thumbs.db
